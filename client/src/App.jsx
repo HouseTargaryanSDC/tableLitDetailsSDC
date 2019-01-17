@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   getInfo() {
-    axios.get('/api/restaurant', { params: { id: 10000000 }})
+    axios.get('/api/restaurant', { params: { id: Math.floor(Math.random() * 10000000) + 1 }})
       .then((data) => {
         this.setState({ restaurantInfo: data.data });
       });

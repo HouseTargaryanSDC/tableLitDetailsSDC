@@ -9,7 +9,8 @@
     "build": "webpack -w",
     "seed": "mysql -u root -p < schema.sql",
     "write": "node ./db/stream/write_data.js",
-    "data": "mysql -u root -p < ./db/stream/csv_data/seed_db.sql"
+    "data": "mysql -u root -p < ./db/stream/csv_data/seed_db.sql",
+    "mongo": "node ./db/stream/write_mongo.js"
   },
   "repository": {
     "type": "git",
