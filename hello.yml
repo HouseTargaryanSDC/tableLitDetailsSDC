@@ -1,0 +1,16 @@
+config:
+  target: http://localhost:9002/api/restaurant
+  phases:
+    - duration: 60
+      arrivalRate: 1000
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+  processor: "./my-functions.js"
+scenarios:
+  - flow:
+    - function: "generateRandomData"
+    - get:
+        url: "/?id={{id}}"
+        json:
+          id: "{{id}}"

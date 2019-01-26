@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/Restaurant', {
+mongoose.connect('mongodb://54.87.189.53:27017/Restaurant', {
   useNewUrlParser:true
 });
 
@@ -58,3 +58,7 @@ new Restaurant(dumm_data).save(err => {if(err)console.log(err)})
 // module.exports = {
 //   db,
 //   Restaurant    
+
+/*
+mongoimport --host 54.87.142.172 --port 27017 --db Restaurant -c Details --type csv --file /Users/sashaguiab/Desktop/SDC/tableLitDetailsSDC/db/stream/csv_data/data_1.csv --bypassDocumentValidation --headerline 
+*/
